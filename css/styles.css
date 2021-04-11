@@ -1,0 +1,266 @@
+/* цвет основного текста #212121 */
+/* вторичный цвет текста #757575 */
+/* белый #FFFFFF */
+/* акцент #2196F3 */
+/* ссылки футер rgba(255, 255, 255, 0.6) */
+/* основной фон макета #E5E5E5 */
+
+/* CSS-переменные */
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --logo-black-color: #000000;
+
+  --background-page-color: #e5e5e5;
+  --background-btn-color: #f5f4fa;
+  --background-header-footer-color: #2f303a;
+
+  --main-font: "Roboto", sans-serif;
+  --logo-font: "Raleway", sans-serif;
+}
+
+body {
+  background-color: var(--background-page-color);
+  color: var(--primary-text-color);
+  font-family: var(--main-font);
+  letter-spacing: 0.03em;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.link {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* HEADER */
+/* Шапка сайта */
+
+.header-page {
+  outline: 2px solid tomato;
+  background-color: var(--primary-white-color);
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* logo */
+.logo {
+  color: var(--accent-color);
+  font-family: var(--logo-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.header-page .accent {
+  color: var(--logo-black-color);
+}
+
+/* nav */
+.nav .link.current {
+  color: var(--accent-color);
+}
+.nav .link {
+  color: var(--title-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.nav .link:hover,
+.nav .link:focus {
+  color: var(--accent-color);
+}
+
+/* contact */
+.h-contact .link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.h-contact .link:hover,
+.h-contact .link:focus {
+  color: var(--accent-color);
+}
+
+/* MAIN */
+/* Герой */
+.hero {
+  outline: 2px solid tomato;
+  background-color: var(--background-header-footer-color);
+  text-align: center;
+}
+.hero-title {
+  margin-bottom: 30px;
+  color: var(--primary-white-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* button общая*/
+.button {
+  border-color: transparent;
+  font-family: inherit;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+/* button Герой*/
+.button.primary {
+  min-width: 200px;
+  padding: 10px 32px;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  font-weight: 700;
+  line-height: 1.9;
+  align-items: center;
+  letter-spacing: 0.06em;
+}
+/* button Наши услуги*/
+.button.secondary {
+  min-width: 73px;
+  padding: 6px 22px;
+  background-color: var(--background-btn-color);
+  color: var(--title-text-color);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: inherit;
+}
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+/* section */
+/* Заголовки h2 */
+.section-title {
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Скрытые заголовки */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* Приемущества */
+/* features */
+
+.section {
+  outline: 2px solid tomato;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features .title {
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features .text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Наша команда */
+/* team */
+.our-team {
+  background-color: var(--background-btn-color);
+}
+.team-item {
+  text-align: center;
+}
+.team .title {
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  font-size: 16px;
+  line-height: 1.2;
+}
+.team .text {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* FOOTER */
+.footer-page {
+  background-color: var(--background-header-footer-color);
+}
+.footer-page .accent {
+  color: var(--primary-white-color);
+}
+
+/* contact */
+.footer-contact {
+  font-style: inherit;
+  line-height: 1.7;
+}
+.address {
+  color: var(--primary-white-color);
+  font-size: 14px;
+}
+.f-contact .link {
+  color: rgba(255, 255, 255, 0.6);
+}
+.f-contact .link:hover,
+.f-contact .link:focus {
+  color: var(--accent-color);
+}
+
+/* МАКЕТ 2 */
+/* Main */
+/* Наши проекты */
+.services.list {
+  margin-bottom: 34px;
+}
+.projects .title {
+  margin-bottom: 4px;
+  color: var(--title-text-color);
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.projects .text {
+  font-size: 16px;
+  line-height: 1.9;
+}
