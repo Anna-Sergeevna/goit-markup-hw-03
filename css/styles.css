@@ -29,6 +29,7 @@ body {
   letter-spacing: 0.03em;
 }
 
+/* Утилиты */
 p,
 ul,
 h1,
@@ -39,6 +40,12 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -56,18 +63,15 @@ h6 {
 /* Шапка сайта */
 
 .header-page {
+  padding-top: 24px;
+  padding-bottom: 25px;
   background-color: var(--primary-white-color);
   border-bottom: 1px solid var(--header-border-line);
 }
 
-.container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 /* logo */
 .logo {
+  margin-right: 93px;
   color: var(--accent-color);
   font-family: var(--logo-font);
   font-weight: 700;
@@ -79,11 +83,38 @@ h6 {
   color: var(--logo-black-color);
 }
 
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header-page .container {
+  display: flex;
+  align-items: center;
+}
+
 /* nav */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav .link.current {
   color: var(--accent-color);
 }
+
+.nav.list {
+display: flex;
+}
+.nav .item + .item {
+  margin-left: 50px;
+}
+
 .nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -94,7 +125,16 @@ h6 {
   color: var(--accent-color);
 }
 
-/* contact */
+/* Контакты */
+.h-contact.list {
+  display: flex;
+  margin-left: auto;
+}
+  
+  .h-contact .item + .item {
+  margin-left: 50px;
+}
+
 .h-contact .link {
   color: var(--primary-text-color);
   font-weight: 500;
@@ -135,6 +175,8 @@ h6 {
 }
 /* button Герой*/
 .button.primary {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   min-width: 200px;
   padding: 10px 32px;
   background-color: var(--accent-color);
@@ -144,10 +186,13 @@ h6 {
   align-items: center;
   letter-spacing: 0.06em;
 }
+
 /* button Наши услуги*/
+
 .button.secondary {
   min-width: 73px;
   padding: 6px 22px;
+  border-radius: 4px;
   background-color: var(--background-btn-color);
   color: var(--title-text-color);
   font-weight: 500;
@@ -191,6 +236,18 @@ h6 {
   padding-bottom: 94px;
 }
 
+.features.list {
+display: flex;
+align-items: center;
+}
+
+.features.list .item {
+width: 270px;
+}
+.features.list .item + .item { 
+  margin-left: 30px;
+}
+
 .features .title {
   margin-bottom: 10px;
   color: var(--title-text-color);
@@ -204,23 +261,48 @@ h6 {
   line-height: 1.7;
 }
 
+
+/* Чем мы занимаемся*/
+.list.card-set {
+display: flex;
+flex-wrap: wrap;
+
+margin-left: -30px;
+margin-top: -30px;
+}
+
+.specification-item {
+flex-basis: calc((100% - 3 * 30px) / 3);
+margin-left: 30px;
+margin-top: 30px;
+}
+
+
 /* Наша команда */
 /* team */
-.our-team {
+.section.team {
   background-color: var(--background-btn-color);
 }
+
 .team-item {
+  flex-basis: calc((100% - 4 * 30px) / 4);
+  margin-left: 30px;
+  margin-top: 30px;
   background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 
   text-align: center;
 }
 .team .title {
+  margin-top: 30px;
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.2;
 }
 .team .text {
+  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.2;
 }
@@ -231,6 +313,7 @@ h6 {
   padding-bottom: 60px;
   background-color: var(--background-header-footer-color);
 }
+
 .footer-page .accent {
   color: var(--primary-white-color);
 }
@@ -256,14 +339,36 @@ h6 {
   color: var(--accent-color);
 }
 
+
+
+
+
+
 /* МАКЕТ 2 */
 /* Main */
-/* Наши проекты */
+
+/* Наши услуги */
 .services.list {
   margin-bottom: 34px;
+  display: flex;
+  justify-content: center;
+
 }
+
+.services.list .item + .item { 
+  margin-left: 8px;}
+
+/* Наши проекты */
 .projects-item {
+  flex-basis: calc((100% - 3 * 30px) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+  border: 1px solid #EEEEEE;
   background-color: var(--primary-white-color);
+}
+
+.projects-content {
+  padding: 20px 24px;
 }
 .projects .title {
   margin-bottom: 4px;
