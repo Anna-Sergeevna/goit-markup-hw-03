@@ -63,15 +63,12 @@ img {
 /* Шапка сайта */
 
 .header-page {
-  padding-top: 24px;
-  padding-bottom: 25px;
   background-color: var(--primary-white-color);
   border-bottom: 1px solid var(--header-border-line);
 }
 
 /* logo */
 .logo {
-  margin-right: 93px;
   color: var(--accent-color);
   font-family: var(--logo-font);
   font-weight: 700;
@@ -81,6 +78,10 @@ img {
 }
 .header-page .accent {
   color: var(--logo-black-color);
+}
+.nav .logo {
+  margin-right: 93px;
+
 }
 
 .container {
@@ -149,7 +150,8 @@ display: flex;
 /* MAIN */
 /* Герой */
 .hero {
-  outline: 2px solid tomato;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--background-header-footer-color);
   text-align: center;
 }
@@ -231,7 +233,6 @@ display: flex;
 /* features */
 
 .section {
-  outline: 2px solid tomato;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -261,12 +262,10 @@ width: 270px;
   line-height: 1.7;
 }
 
-
 /* Чем мы занимаемся*/
 .list.card-set {
 display: flex;
 flex-wrap: wrap;
-
 margin-left: -30px;
 margin-top: -30px;
 }
@@ -276,7 +275,6 @@ flex-basis: calc((100% - 3 * 30px) / 3);
 margin-left: 30px;
 margin-top: 30px;
 }
-
 
 /* Наша команда */
 /* team */
@@ -291,7 +289,6 @@ margin-top: 30px;
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-
   text-align: center;
 }
 .team .title {
@@ -314,35 +311,42 @@ margin-top: 30px;
   background-color: var(--background-header-footer-color);
 }
 
+.footer-page .container {
+display: flex;
+align-items: baseline;
+}
+
+/* Лого */
 .footer-page .accent {
   color: var(--primary-white-color);
 }
-/* logo */
-.footer-page .logo {
-  margin-bottom: 20px;
-}
 
-/* contact */
+/* Контакты */
+.footer-contact .address, 
+.footer-contact .link {
+  display: block;
+}
 .footer-contact {
+  max-width: 231px;
+  margin-top: 20px;
   font-style: inherit;
   line-height: 1.7;
 }
 .address {
+    margin-bottom: 9px;
   color: var(--primary-white-color);
   font-size: 14px;
 }
-.f-contact .link {
+.footer-contact .link {
   color: rgba(255, 255, 255, 0.6);
 }
-.f-contact .link:hover,
-.f-contact .link:focus {
+.footer-contact .link:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-contact .link:hover,
+.footer-contact .link:focus {
   color: var(--accent-color);
 }
-
-
-
-
-
 
 /* МАКЕТ 2 */
 /* Main */
@@ -352,7 +356,6 @@ margin-top: 30px;
   margin-bottom: 34px;
   display: flex;
   justify-content: center;
-
 }
 
 .services.list .item + .item { 
